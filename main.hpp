@@ -22,23 +22,11 @@ void insertionsort(vector<int> &);
 void insert(vector<int> &number, int idx)
 {
     // TODO: walk left from idx-1 while elements are greater than key,
-    //       shift them right; place key at the gap.
-    if (idx <= 0 || idx >= (int)number.size()) return;
-    int key = number[idx];
-    int i = idx - 1;
-    while (i >= 0 && number[i] > key)
-    {
-        number[i + 1] = number[i];
-        i--;
-    }
-    number[i + 1] = key;
 }
 
 void insertionsort(vector<int> &number)
 {
     // TODO: call insert(number, i) for i = 0 .. N-1.
-    for (size_t i = 0; i < number.size(); i++)
-        insert(number, (int)i);
 }
 
 void makeVector(vector<int> &number, int N)
